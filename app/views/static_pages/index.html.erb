@@ -1,0 +1,25 @@
+<% if logged_in? %>
+
+<h1> <%= current_user.name %> </h1>
+
+<h2> Bienvenue sur le site qui te donnera la clé de l'univers. </h2>
+
+<p> Tu ne sais pas ce que tu va manger ce soir mais tu veux connaitre la solution de l'univers ? </p>
+
+<p> <%= link_to "Par ici", answer_path, class: "btn btn-success"%> </p>
+
+
+<% else %>
+
+<h1> Cher visiteur </h1>
+
+<h2> Bienvenue sur le site qui vous donnera la clé de l'univers. </h2>
+
+<p> Vous souhaitez connaître la réponse à la question de l'univers ? </p>
+
+<p> Identifie toi bro ! </p>
+
+<p> <%= link_to "Log in", login_path, class: "btn btn-success" %> </p>
+
+
+<% end %>
